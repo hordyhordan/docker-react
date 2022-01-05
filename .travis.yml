@@ -1,3 +1,4 @@
+# This travis file will add continuous integration to the project 
 language: generic
 sudo: required 
 service: 
