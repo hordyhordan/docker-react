@@ -10,6 +10,7 @@ before_install:
 script:
   - docker run -e CI=true hordyhordan/docker-react npm run test -- --coverage
 
+#This portion of the travis file connects Travis CI to AWS
 deploy:
   provider: elasticbeanstalk
   region: "us-west-1"
@@ -18,6 +19,6 @@ deploy:
   bucket_env: "elasticbeanstalk-us-west-1-377279116230"
   bucket_path: "docker-react"
   on: 
-    branch: master
+    branch: main
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
